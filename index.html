@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080d19">
+  <meta name="description" content="Folze AI Studio - مساعد الذكاء الاصطناعي للبرمجة والتعلّم الأمني المصرّح به">
+  <title>Folze AI Studio</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="/" aria-label="Folze AI Studio">
+        <span class="brand-mark">F</span>
+        <span><strong>Folze AI</strong><small>STUDIO</small></span>
+      </a>
+      <button id="new-chat" class="new-chat"><span>＋</span> محادثة جديدة</button>
+      <p class="nav-label">مساحة العمل</p>
+      <button class="nav-item active" data-mode="chat"><span>✦</span> AI Chat</button>
+      <button class="nav-item" data-mode="code"><span>⌘</span> Code Studio</button>
+      <button class="nav-item" data-mode="security"><span>⬡</span> Security Lab</button>
+      <div class="sidebar-bottom">
+        <div class="status-dot"></div>
+        <div><strong>Folze AI</strong><small>مساعدك الذكي</small></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button id="menu-toggle" class="icon-button" aria-label="فتح القائمة">☰</button>
+        <div class="breadcrumb"><span>Folze AI Studio</span><b>/</b><strong id="mode-title">AI Chat</strong></div>
+        <span class="api-status"><i></i><span id="api-status-text">يتحقق من الاتصال</span></span>
+      </header>
+
+      <section class="workspace">
+        <div id="welcome" class="welcome">
+          <div class="orb"><span>✦</span></div>
+          <p class="eyebrow">YOUR AI WORKSPACE</p>
+          <h1>أهلاً بك في <span>Folze AI</span></h1>
+          <p class="welcome-copy">شنو نشتغل عليه اليوم؟ اكتب فكرتك وخلي نبدأ نبنيها خطوة بخطوة.</p>
+          <div class="suggestions">
+            <button class="suggestion" data-prompt="أنشئ لي صفحة هبوط عصرية باستخدام HTML وCSS مع شرح الملفات."><span>◈</span><b>بناء موقع</b><small>ابدأ مشروع ويب جديد</small></button>
+            <button class="suggestion" data-prompt="اشرح لي هذا الكود وساعدني أكتشف الأخطاء فيه."><span>⌘</span><b>مراجعة كود</b><small>افهم الأخطاء وأصلحها</small></button>
+            <button class="suggestion" data-prompt="اعطني خطة آمنة لفحص أمان تطبيق محلي أملكه، مع قائمة تحقق دفاعية."><span>⬡</span><b>مختبر أمني</b><small>تعلّم ضمن بيئة مصرّح بها</small></button>
+            <button class="suggestion" data-prompt="علّمني أساسيات JavaScript بمثال عملي بسيط للمبتدئين."><span>✧</span><b>تعلّم البرمجة</b><small>خطوة بخطوة</small></button>
+          </div>
+        </div>
+
+        <div id="chat-log" class="chat-log" aria-live="polite"></div>
+
+        <div class="composer-wrap">
+          <form id="chat-form" class="composer">
+            <textarea id="message" rows="1" maxlength="12000" placeholder="اكتب طلبك هنا... اسأل، اكتب كود، أو اشرح مشكلة" aria-label="رسالتك"></textarea>
+            <div class="composer-footer">
+              <span class="composer-hint"><span>✦</span> Folze AI يمكن أن يخطئ؛ راجع الأكواد قبل تشغيلها.</span>
+              <button id="send" type="submit" class="send-button"><span>إرسال</span><b>↑</b></button>
+            </div>
+          </form>
+          <p class="disclaimer">استخدم Security Lab فقط على الأنظمة التي تملكها أو لديك تصريح لاختبارها.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
